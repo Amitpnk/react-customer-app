@@ -26,7 +26,7 @@ To create a project, run below command line prompt
     - [Lab 3 - Components](https://github.com/Amitpnk/react-customer-app/tree/master/Lab3/customer-app)
     - [Lab 4 - Working on props](https://github.com/Amitpnk/react-customer-app/tree/master/Lab4/customer-app)
     - [Lab 5 - Working on states](https://github.com/Amitpnk/react-customer-app/tree/master/Lab5/customer-app)
-    Lab 6 - Component life cycle
+    - [Lab 6 - Component life cycle]
     Lab 7 - React events
     Lab 8 - Refs
     Lab 9 - key
