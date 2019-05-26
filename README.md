@@ -20,7 +20,7 @@ To create a project, run below command line prompt
     - [npm run start](#npm-start)
     - [npm run test](#npm-test)
     - [npm run build](#npm-run-build)
-- [Sample application with each labs]
+- Sample application with each labs
     - [Lab 1 - Running first react application](https://github.com/Amitpnk/react-customer-app/tree/master/Lab1/customer-app)
     - [Lab 2 - Templating using JSX](https://github.com/Amitpnk/react-customer-app/tree/master/Lab2/customer-app)
     - [Lab 3 - Components](https://github.com/Amitpnk/react-customer-app/tree/master/Lab3/customer-app)
