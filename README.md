@@ -51,7 +51,7 @@ You can drop mail to email address amit.naik8103@gmail.com or you can create iss
 After creation, your project should look like this:
 
 ```
-my-app/
+customer-app/
   README.md
   node_modules/
   package.json
