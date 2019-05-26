@@ -32,7 +32,7 @@ To create a project, run below command line prompt
     - [Lab 9 - Using key creating dynamic customer table](https://github.com/Amitpnk/react-customer-app/tree/master/Lab9/customer-app)
     - [Lab 10 - Organize the project, adding add and delete event to table](https://github.com/Amitpnk/react-customer-app/tree/master/Lab10/customer-app)
     - [Lab 11 - React router](https://github.com/Amitpnk/react-customer-app/tree/master/Lab11/customer-app)
-    Lab 12 - Calling API (by creating fake server)
+    - [Lab 12 - Calling API (by creating fake server)](https://github.com/Amitpnk/react-customer-app/tree/master/Lab12/customer-app)
 
 ## About React application
 
