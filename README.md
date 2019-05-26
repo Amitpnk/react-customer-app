@@ -44,7 +44,7 @@ From Sep 23,2017 i.e., react 16.0.0 onward Facebook has released with MIT Licens
 
 ## Sending Feedback
 
-For feedback can drop mail to my email address amit.naik8103@gmail.com or you can create [issue] (https://github.com/Amitpnk/react-customer-app/issues/new)
+For feedback can drop mail to my email address amit.naik8103@gmail.com or you can create [issue](https://github.com/Amitpnk/react-customer-app/issues/new)
 
 ## Folder Structure
 
