@@ -9,8 +9,9 @@ function App() {
     //     My first react application
     //   </h1>
     // </div>
-    
+
     // without jsx 
+    // https://babeljs.io/repl converts jsx to javascript object
     React.createElement("div", {
       className: "App"
     }, React.createElement("h1", null, "My first react application with babel"))
