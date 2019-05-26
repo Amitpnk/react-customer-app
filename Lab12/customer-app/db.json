@@ -1,0 +1,28 @@
+{
+  "Customers": [
+    {
+      "id": 1,
+      "code": 1001,
+      "name": "Krishna",
+      "amount": 3000
+    },
+    {
+      "code": "1002",
+      "name": "Amit",
+      "amount": "5000",
+      "id": 2
+    },
+    {
+      "code": "1004",
+      "name": "Shiv",
+      "amount": "8000",
+      "id": 3
+    },
+    {
+      "code": "1004",
+      "name": "Shwetha",
+      "amount": "8000",
+      "id": 4
+    }
+  ]
+}
