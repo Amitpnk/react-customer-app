@@ -21,7 +21,7 @@ To create a project, run below command line prompt
     - [npm run test](#npm-test)
     - [npm run build](#npm-run-build)
 - [Sample application with each labs]
-    Lab 1 - Introduction to React
+    Lab 1 - Running first react application
     Lab 2 - Templating using JSX
     Lab 3 - Components
     Lab 4 - Working on props 
