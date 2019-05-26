@@ -38,7 +38,7 @@ To create a project, run below command line prompt
 
 React application is javascript library for building user interface.
 
-In our we are using React version 16.8.6 and react-scripts 3.0.1
+In our applicatin, we are using React version 16.8.6 and react-scripts 3.0.1
 
 From Sep 23,2017 i.e., react 16.0.0 onward Facebook has released with MIT License
 
