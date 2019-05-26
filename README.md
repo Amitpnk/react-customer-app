@@ -6,10 +6,10 @@ To set up your react application you need to have Node >= 6 and npm >= 5.2 on yo
 
 To create a project, run below command line prompt
 
-`npx create-react-app customer-app` for creating application
-`cd customer-app` for changing directory to other folder
-`code .` to open application in VS code editor
-`npm run start` or `npm start` for start application
+`npx create-react-app customer-app` for creating application  
+`cd customer-app` for changing directory to other folder  
+`code .` to open application in VS code editor  
+`npm run start` or `npm start` for start application  
 
 ## Table of Contents
 
