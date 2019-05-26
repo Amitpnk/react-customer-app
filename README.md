@@ -48,23 +48,39 @@ For feedback can drop mail to my email address amit.naik8103@gmail.com or you ca
 
 ## Folder Structure
 
-After creation, your project should look like this:
+By end of labe, your project will look like this:
 
 ```
 customer-app/
   README.md
   node_modules/
   package.json
+  package-lock.json
+  db.json
   public/
     index.html
     favicon.ico
   src/
-    App.css
-    App.js
-    App.test.js
+    assets/
+      images/
+        log.svg
+    components/
+      App/
+        App.css
+        App.js
+        App.test.js
+      Common/
+        Clock.jsx
+        EventClass.jsx
+        LifecycleApp.js
+      Customer/
+        Customer.jsx
+      Routing/
+        Routing.jsx
+      User/
+        User.jsx
     index.css
     index.js
-    logo.svg
 ```
 
 In our Lab 10, will look how we can organise our react application
