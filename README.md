@@ -23,7 +23,7 @@ To create a project, run below command line prompt
 - [Sample application with each labs]
     - [Lab 1 - Running first react application](https://github.com/Amitpnk/react-customer-app/tree/master/Lab1/customer-app)
     - [Lab 2 - Templating using JSX](https://github.com/Amitpnk/react-customer-app/tree/master/Lab2/customer-app)
-    Lab 3 - Components
+    - [Lab 3 - Components](https://github.com/Amitpnk/react-customer-app/tree/master/Lab3/customer-app)
     Lab 4 - Working on props 
     Lab 5 - Working on states
     Lab 6 - Component life cycle
@@ -44,7 +44,7 @@ From Sep 23,2017 i.e., react 16.0.0 onward Facebook has released with MIT Licens
 
 ## Sending Feedback
 
-You can drop mail to email address amit.naik8103@gmail.com or you can create issue 
+For feedback can drop mail to my email address amit.naik8103@gmail.com or you can create [issue] (https://github.com/Amitpnk/react-customer-app/issues/new)
 
 ## Folder Structure
 
