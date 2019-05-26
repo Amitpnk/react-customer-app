@@ -29,7 +29,7 @@ To create a project, run below command line prompt
     - [Lab 6 - Component life cycle](https://github.com/Amitpnk/react-customer-app/tree/master/Lab6/customer-app)
     - [Lab 7 - React events](https://github.com/Amitpnk/react-customer-app/tree/master/Lab7/customer-app)
     - [Lab 8 - Using Refs create customer page](https://github.com/Amitpnk/react-customer-app/tree/master/Lab8/customer-app)
-    Lab 9 - key
+    - [Lab 9 - Using key will create dynamic customer table](https://github.com/Amitpnk/react-customer-app/tree/master/Lab9/customer-app)
     Lab 10 - Organzise the project
     Lab 11 - React router
     Lab 12 - Calling API (by creating fake server)
