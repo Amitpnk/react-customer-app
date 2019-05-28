@@ -83,5 +83,5 @@ customer-app/
     index.js
 ```
 
-In our Lab 10, will look how we can organise our react application
+In Lab 10, will look how we can organise our react application
 
