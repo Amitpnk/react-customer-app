@@ -4,13 +4,6 @@ This project was generated with [Create React App](https://reactjs.org/docs/crea
 
 To set up your react application you need to have Node >= 6 and npm >= 5.2 on your machine.
 
-To create a project, run below command line prompt
-
-`npx create-react-app customer-app` for creating application  
-`cd customer-app` for changing directory to other folder  
-`code .` to open application in VS code editor  
-`npm run start` or `npm start` for start application  
-
 ## Table of Contents
 
 - [About React application](#about-react-application)
@@ -86,3 +79,285 @@ customer-app/
 
 In Lab 10, will look how we can organise our react application
 
+
+To create a project, run below command line prompt
+
+`npx create-react-app customer-app` for creating application  
+`cd customer-app` for changing directory to other folder  
+`code .` to open application in VS code editor  
+`npm run start` or `npm start` for start application
+
+## Sample application with each labs
+
+### Lab 1 - Running first react application
+
+<!-- What and why we have to use React
+You can find answer here -->
+
+To create a project, run below command line prompt
+
+```
+// For creating react application
+$ npx create-react-app customer-app
+
+// For changind directory to other folder
+$ cd customer-app
+
+// To open application in VS code editor  
+$ code .
+
+// To run application
+$ npm run start
+
+```
+
+#### Prerequisite to learn react
+
+Install Node and npm latest version <br/> 
+Install Visual Studio Code <br/>
+
+### Lab 2 - Templating using JSX
+
+JSX - Javascript + XML <br/>
+It allows us to look HTML syntax which transform you light weight javascript object
+
+We can implement React without JSX, please find below URL where JSX compiler
+
+<https://babeljs.io/repl>
+
+TODO
+
+### Lab 3 - Components
+
+ReactJS component <br/>
+Components are building blocks of React applicatin
+They allow you to split UI into independent & reusable process. It make code decouple
+<br/><br/>
+There is 2 way of writing component
+* Class based component
+* Functional component
+  * Pure function
+  * ES6 function
+
+From React's point of view, all above components are equivalent
+
+```javascript
+function App() {
+  // Pure function component
+  function PureFunction() {
+    return <div> Pure function </div>;
+  }
+ 
+  // Functinal ES6 component (using arrow function)
+  const FunctionES6 = () => {
+    return <div> Function with ES 6 </div>;
+  }
+
+  // Class based component
+  class ClassBasedComponent extends React.Component {
+    render() {
+      return <div> Class based component </div>;
+    }
+  }
+
+  return (
+    <div className="App">
+      <h1>Types of component</h1>
+      <PureFunction />
+      <FunctionES6 />
+      <ClassBasedComponent />
+    </div>
+  );
+}
+```
+
+### Lab 4 - Working on props
+
+Normally we pass attributes like class, href, id, etc in HTML element
+```html
+<input type="text" value="Amit">
+```
+Now if we want to pass value to component we have to use Props
+
+```javascript
+function App() {
+  
+  // Pure function component
+  function PureFunction(props) {
+    return <div> {props.message} </div>;
+  }
+
+  // Functinal ES6 component (using arrow function)
+  const FunctionES6 = (props) => {
+    return <div> {props.message} </div>;
+  }
+  
+  // Class based component
+  class ClassBasedComponent extends React.Component {
+    render() {
+      return <div> {this.props.message} </div>;
+    }
+  }
+
+  return (
+    <div className="App">
+      <h1>Working on props</h1>
+      <PureFunction message="Pure function" />
+      <FunctionES6 message="Function with ES 6" />
+      <ClassBasedComponent message="Class based component " />
+    </div>
+  );
+}
+```
+
+### Lab 5 - Working on states
+
+State allows us to create components that are dynamic and interactive
+
+Create Clock.jsx file
+```jsx
+import React from "react";
+
+class Clock extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            date: new Date()
+        }
+    }
+    render() {
+        return (
+            <div>It is {this.state.date.toLocaleTimeString()}</div>
+        );
+    }
+}
+
+export default Clock;
+```
+
+import clock.jsx in app.js file
+```jsx
+function App() {
+  return (
+    <div className="App">
+      <h1>Working on states</h1>
+      <Clock />
+    </div>
+  );
+}
+```
+
+### Lab 6 - Component life cycle
+
+Life cycle methods
+* ComponentWillMount
+* ComponentDidMount
+* ComponentWillReceiveMount
+* ShouldComponentupdate
+* ComponentWillUpdate
+* ComponentDidUpdate
+* ComponentWillUnmount
+
+```jsx
+import React from "react";
+
+class Clock extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            date: new Date()
+        }
+    }
+
+    // executed after the first render
+    componentDidMount() {
+        this.clockId = setInterval(() => {
+            this.tick()
+        }, 1000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.clockId);
+    }
+
+    tick = () => {
+        this.setState({
+            date: new Date()
+        })
+    }
+
+    render() {
+        return (
+            <div>It is {this.state.date.toLocaleTimeString()}</div>
+        );
+    }
+}
+
+export default Clock;
+```
+
+You can find full life cycle method in LifecycleApp.js file
+
+### Lab 7 - React events
+
+Below are some few way (i.e., 5 ways) we can bind event
+
+* Event binding
+* Event with parameter
+* Event with parameter binding
+* Event with parameter binding in constructor
+* Event binding with input event
+
+```jsx
+import React from "react";
+
+class EventClass extends React.Component {
+
+    constructor() {
+        super();
+
+        this.state = {
+            name: 'Initial data...'
+        }
+        this.changeNamewithParamBind = this.changeNamewithParamBind.bind(this);
+    }
+
+    changeName = () => {
+        this.setState({
+            name: 'Amit Naik'
+        })
+    }
+
+    changeNamewithParam = (param) => {
+        this.setState({
+            name: param
+        })
+    }
+
+    changeNamewithParamBind = (param) => {
+        this.setState({
+            name: param
+        })
+    }
+
+    changeNamefromInput = (event) => {
+        this.setState({
+            name: event.target.value
+        })
+    }
+
+    render() {
+        return <div>
+            <button onClick={this.changeName}>Change state</button> <br />
+            <button onClick={() => this.changeNamewithParam('with parameters')}>Change state with paramater</button><br />
+            <button onClick={this.changeNamewithParam.bind(this, 'with parameters bind')}>Change state with paramater bind</button><br />
+            <button onClick={() => this.changeNamewithParamBind('with parameters bind in constructor')}>Change state with paramater bind in constructor</button><br />
+
+            Change state with input event : <input type="text" name="" id="" onChange={this.changeNamefromInput} />
+            <h4>{this.state.name}</h4>
+        </div>;
+    }
+}
+
+export default EventClass
+```
