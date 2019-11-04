@@ -361,3 +361,101 @@ class EventClass extends React.Component {
 
 export default EventClass
 ```
+
+
+### Lab 8 - Using Refs create customer page
+
+ref is used to return reference to element
+
+Create Customer.jsx file
+
+```javascript
+import React from "react";
+
+export class Customer extends React.Component {
+    constructor() {
+        super();
+    }
+
+    Cancel = () => {
+
+        this.CustomerCode.value = '';
+        this.CustomerName.value = '';
+        this.CustomerAmount.value = '';
+    }
+
+    render() {
+        return (<div>
+            <div>Customer code : <input type="text" ref={(input) => { this.CustomerCode = input }} /></div>
+            <div>Customer name : <input type="text" ref={(input) => { this.CustomerName = input }} /></div>
+            <div>Customer amount : <input type="text" ref={(input) => { this.CustomerAmount = input }} /></div>
+            <input type="button" value="Cancel" onClick={()=>this.Cancel()} />
+        </div>);
+    }
+}
+```
+
+### Lab 9 -Using key creating dynamic customer table
+
+React keys are useful when working with dynamically created components or when we want to alter by users.
+Set key value will keep our component uniquely identified after change
+
+```javascript
+import React from "react";
+
+export class Customer extends React.Component {
+    constructor() {
+        super();
+
+        this.state = {
+            data: [
+                { code: 1001, name: 'Amit', amount: 5000 },
+                { code: 1002, name: 'Shwetha', amount: 6000 },
+                { code: 1003, name: 'Kalpita', amount: 6000 },
+            ]
+        }
+    }
+
+    Cancel = () => {
+
+        this.CustomerCode.value = '';
+        this.CustomerName.value = '';
+        this.CustomerAmount.value = '';
+    }
+
+    render() {
+        return (<div>
+            <div>Customer code : <input type="text" ref={(input) => { this.CustomerCode = input }} /></div>
+            <div>Customer name : <input type="text" ref={(input) => { this.CustomerName = input }} /></div>
+            <div>Customer amount : <input type="text" ref={(input) => { this.CustomerAmount = input }} /></div>
+            <input type="button" value="Cancel" onClick={() => this.Cancel()} />
+
+            <div>
+                <table>
+                    <tr>
+                        <td>Customer code</td>
+                        <td>Customer name</td>
+                        <td>Customer amount</td>
+                    </tr>
+                    <tbody>
+                        {this.state.data.map((value, i) =>
+                            <TableRow data={value} key={i} />
+                        )}
+                    </tbody>
+                </table>
+            </div>
+        </div >);
+    }
+}
+
+class TableRow extends React.Component {
+    render() {
+        return <tr>
+            <td>{this.props.data.code}</td>
+            <td>{this.props.data.name}</td>
+            <td>{this.props.data.amount}</td>
+        </tr>
+    }
+}
+
+```
