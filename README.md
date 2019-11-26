@@ -395,7 +395,7 @@ export class Customer extends React.Component {
 }
 ```
 
-### Lab 9 -Using key creating dynamic customer table
+### Lab 9 - Using key creating dynamic customer table
 
 React keys are useful when working with dynamically created components or when we want to alter by users.
 Set key value will keep our component uniquely identified after change
@@ -459,3 +459,6 @@ class TableRow extends React.Component {
 }
 
 ```
+
+### Lab 10 - Organize the project, adding add and delete event to table
+
