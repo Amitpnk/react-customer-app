@@ -462,3 +462,133 @@ class TableRow extends React.Component {
 
 ### Lab 10 - Organize the project, adding add and delete event to table
 
+Organize project as per [folder structure](#folder-structure)
+
+```javascript
+import React from "react";
+
+constructor() {
+    // ...
+
+    this.Add = this.Add.bind(this);
+}
+Add = () => {
+    let obj = {
+        code: this.CustomerCode.value,
+        name: this.CustomerName.value,
+        amount: this.CustomerAmount.value
+    }
+
+    this.setState(prevState => ({
+        data: [...prevState.data, obj]
+    }))
+
+    // incase if you want to add value on top of grid
+
+    // this.setState(prevState => ({
+    //     data: [obj, ...prevState.data]
+    // }))
+
+    this.Cancel();
+}
+
+Delete = (index, e) => {
+    const dataDel = Object.assign([], this.state.data);
+    dataDel.splice(index, 1);
+    this.setState({ data:  dataDel })
+}
+
+
+    render() {
+        return <div>
+        <table>
+                <tbody>
+                    <tr>
+                        <td>Customer code</td>
+                        <td>Customer name</td>
+                        <td>Customer amount</td>
+                    </tr>
+            // ...
+                    {this.state.data.map((cust, i) => <TableRow key={i} data={cust}
+                        delEvent={this.Delete.bind(this, i)}
+                    />)}
+
+                </tbody>
+            </table>
+        </div>;
+    }
+}
+
+class TableRow extends React.Component {
+    render() {
+        return <tr>
+            <td>{this.props.data.code}</td>
+            <td>{this.props.data.name}</td>
+            <td>{this.props.data.amount}</td>
+            <td>
+                <input type="button" value="delete" onClick={this.props.delEvent} />
+            </td>
+        </tr>
+    }
+}
+
+```
+
+### Lab 11 - React router
+
+React Router is the routing library for React
+
+```
+// install react-router-dom to application
+$ npm install react-router-dom --save
+
+```
+
+Create Routing.jsx in *Routing* folder and User.jsx in *User* folder 
+
+In Routing.jsx 
+```javascript
+import React from "react";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import Customer from '../Customer/Customer';
+import User from '../User/User';
+
+const active = {
+    "border-style": "solid",
+    "color": "white",
+    "background-color": "black"
+}
+class Routing extends React.Component {
+
+    render() {
+        return <Router>
+            <NavLink to="/" exact activeStyle={active} >Home</NavLink> &nbsp;
+            <NavLink to="/About/" exact activeStyle={active} >About</NavLink>&nbsp;
+            <NavLink to="/Customer" exact activeStyle={active} >Customer</NavLink> &nbsp;
+            <NavLink to={`/User/${"Amit"}`} exact activeStyle={active} >user Amit</NavLink>
+
+            <Route path="/" strict exact render={() => { return (<h1>Welcome to home page</h1>) }} /><Route />
+            <Route path="/About/" strict exact render={() => { return (<h1>Welcome to about <NavLink to={`/User/${"Krishna"}`} exact activeStyle={{ color: 'green' }} >user Krishna</NavLink></h1>) }} />
+            <Route path="/Customer" strict exact component={Customer} />
+            <Route path="/User/:username" exact render={({ match }) => { return (<User username={match.params.username} />) }} />
+        </Router>;
+    }
+}
+
+export default Routing
+```
+
+In User.jsx
+```javascript
+import React from "react";
+
+class User extends React.Component {
+
+    render() {
+        return <div> <h1>Welcome user {this.props.username}</h1> </div>
+    }
+}
+
+export default User;
+
+```
