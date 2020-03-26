@@ -236,15 +236,39 @@ export default Clock;
 ```
 
 import clock.jsx in app.js file
+
 ```jsx
 function App() {
   return (
     <div className="App">
       <h1>Working on states</h1>
       <Clock />
+      <br/>
+      <HookState/>
     </div>
   );
 }
+```
+
+React 16.8 Update: Hooks let you use state and other React features without writing classes
+
+Create HookState.jsx file
+
+```jsx
+import React, { useState } from "react";
+
+function HookState(props) {
+    const [counter, setCounter] = useState(0);
+
+    return (<div>
+        <b>Counter with useState hook</b> <br /> <br />
+        <>Counter value : {counter}</> <br /> <br />
+        <button onClick={() => setCounter(counter + 1)} >+</button>
+        <button onClick={() => setCounter(counter - 1)} >-</button>
+    </div>);
+}
+
+export default HookState;
 ```
 
 ### Lab 6 - Component life cycle
