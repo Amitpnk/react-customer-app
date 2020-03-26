@@ -1,4 +1,4 @@
-# react-customer-app
+# react-tutorial
 
 This project was generated with [Create React App](https://reactjs.org/docs/create-a-new-react-app.html) is a tool (built by developers at Facebook) 
 
@@ -10,9 +10,9 @@ To set up your react application you need to have Node >= 6 and npm >= 5.2 on yo
 - [Sending Feedback](#sending-feedback)
 - [Folder Structure](#folder-structure)
 - [Main Available Scripts](#available-scripts)
-    - [npm run start](#npm-start)
-    - [npm run test](#npm-test)
-    - [npm run build](#npm-run-build)
+  - [npm run start](#npm-start)
+  - [npm run test](#npm-test)
+  - [npm run build](#npm-run-build)
 - Sample application with each labs
     - [Lab 1 - Running first react application](https://github.com/Amitpnk/react-customer-app/tree/master/Lab01/customer-app)
     - [Lab 2 - Templating using JSX](https://github.com/Amitpnk/react-customer-app/tree/master/Lab02/customer-app)
