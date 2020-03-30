@@ -27,6 +27,8 @@ To set up your react application you need to have Node >= 6 and npm >= 5.2 on yo
     - [Lab 11 - React router](https://github.com/Amitpnk/react-customer-app/tree/master/Lab11/customer-app)
     - [Lab 12 - Calling API (by creating fake server)](https://github.com/Amitpnk/react-customer-app/tree/master/Lab12/customer-app)
     - [Lab 13 - Environment setup for dev and prod](https://github.com/Amitpnk/react-customer-app/tree/master/Lab13/customer-app)
+    - [Lab 14 - Implementing of redux in react app](https://github.com/Amitpnk/react-tutorial/tree/master/Lab14)
+
 
 ## About React application
 
@@ -571,7 +573,7 @@ $ npm install react-router-dom --save
 Create Routing.jsx in *Routing* folder and User.jsx in *User* folder 
 
 In Routing.jsx 
-```javascript
+```jsx
 import React from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import Customer from '../Customer/Customer';
@@ -603,7 +605,7 @@ export default Routing
 ```
 
 In User.jsx
-```javascript
+```jsx
 import React from "react";
 
 class User extends React.Component {
