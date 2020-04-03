@@ -20,7 +20,7 @@ To set up your react application you need to have Node >= 6 and npm >= 5.2 on yo
     - [Lab 4 - Working on props](https://github.com/Amitpnk/react-customer-app/tree/master/Lab04/customer-app)
     - [Lab 5 - Working on states](https://github.com/Amitpnk/react-customer-app/tree/master/Lab05/customer-app)
     - [Lab 6 - Component life cycle](https://github.com/Amitpnk/react-customer-app/tree/master/Lab06/customer-app)
-    - [Lab 7 - React events](https://github.com/Amitpnk/react-customer-app/tree/master/Lab07/customer-app)
+    - [Lab 7 - React event handling](https://github.com/Amitpnk/react-customer-app/tree/master/Lab07/customer-app)
     - [Lab 8 - Using Refs create customer page](https://github.com/Amitpnk/react-customer-app/tree/master/Lab08/customer-app)
     - [Lab 9 - Using key creating dynamic customer table](https://github.com/Amitpnk/react-customer-app/tree/master/Lab09/customer-app)
     - [Lab 10 - Organize the project, adding add and delete event to table](https://github.com/Amitpnk/react-customer-app/tree/master/Lab10/customer-app)
@@ -324,15 +324,17 @@ export default Clock;
 
 You can find full life cycle method in LifecycleApp.js file
 
-### Lab 7 - React events
+### Lab 7 - React event handling
 
 Below are some few way (i.e., 5 ways) we can bind event
 
 * Event binding
 * Event with parameter
 * Event with parameter binding
-* Event with parameter binding in constructor
+* Event with parameter binding in constructor (recommended)
 * Event binding with input event
+
+Recommended is  <b>Event with parameter binding in constructor</b> as it runs only once in constructor
 
 ```jsx
 import React from "react";
